@@ -1,0 +1,38 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.grpc.product;
+
+message ModelRequest {
+  int32 code = 1;
+}
+
+message emptyRequest {
+
+}
+
+message ModelResponse {
+  message ModelBase {
+    int32 code = 1;
+    string name = 2;
+    string price = 3;
+    int32 total = 4;
+    string status = 5;
+    string category = 6;
+  }
+
+  repeated ModelBase modelBase = 1;
+}
+
+message ModelOneRespone {
+  int32 code = 1;
+  string name = 2;
+  string price = 3;
+  int32 total = 4;
+  string status = 5;
+  string category = 6;
+}
+
+service ProductService {
+  rpc findAllProduct(emptyRequest) returns (ModelResponse);
+  rpc findOneProduct(ModelRequest) returns (ModelOneRespone);
+}
