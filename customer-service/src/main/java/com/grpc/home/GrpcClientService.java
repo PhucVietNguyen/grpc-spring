@@ -1,7 +1,7 @@
 package com.grpc.home;
 
 import com.grpc.home.dto.ModelBaseDto;
-import com.grpc.product.*;
+import com.grpc.home.product.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import org.springframework.stereotype.Service;

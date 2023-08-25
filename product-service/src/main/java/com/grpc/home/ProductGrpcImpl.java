@@ -2,7 +2,7 @@ package com.grpc.home;
 
 import com.grpc.home.dto.ModelBaseDto;
 import com.grpc.home.service.ModelBaseService;
-import com.grpc.product.*;
+import com.grpc.home.product.*;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
